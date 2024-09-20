@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles/index.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../src/scripts/index.js"></script>
+</head>
+
+<body class="container-fluid" background="./images/to-do-bg.jpg">
+    <div class="bg-shade ">
+        <header class="bg-dark text-white">
+            <div class="d-flex justify-content-between p-2">
+                <div class="ms-2">
+                    <h3>To-Do</h3>
+                </div>
+                <div class="me-5 btn-container"  id="BtnContainer">
+                    <button class="btn btn-primary" id="BtnSignin">Signin</button>
+                    <button class="btn me-3 ms-1 btn-warning" id="BtnRegister">Register</button>
+                </div>
+                <div class="d-none me-5"  id="SignoutContainer">
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-light">
+                                <span class="bi bi-person-circle me-1"></span>
+                                <span id="Username"></span>
+                            </button>
+                        </div>
+                        <div class="me-3 ms-2 d-flex justify-content-center align-items-center">
+                            <button class="btn btn-danger" id="BtnSignout">Signout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+
+        </section>
+    </div>
+    <div class="modal fade" id="AddTask-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-bg-primary">Add Task</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Task Id</dt>
+                        <dd><input class="form-control TaskId" type="text" id="Task-Id" readonly></dd>
+                        <dt>Title</dt>
+                        <dd><input class="form-control" type="text" id="Task-Title"></dd>
+                        <dt>Description</dt>
+                        <dd>
+                            <textarea name="" id="Task-Description" class="form-control"></textarea>
+                        </dd>
+                        <dt>Date</dt>
+                        <dd><input type="date" class="form-control" id="Task-Date"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="btn-Add-Task" data-bs-dismiss="modal">Add</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" id="btn-Cancel-Task" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="EditTask-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-danger">Edit Task</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Task Id</dt>
+                        <dd><input class="form-control TaskId" type="text" id="Edit-TaskId" readonly></dd>
+                        <dt>Title</dt>
+                        <dd><input class="form-control" type="text" id="Edit-TaskTitle"></dd>
+                        <dt>Description</dt>
+                        <dd>
+                            <textarea name="" id="Edit-TaskDescription" class="form-control"></textarea>
+                        </dd>
+                        <dt>Date</dt>
+                        <dd><input type="date" class="form-control" id="Edit-TaskDate"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="btn-Update-Task" data-bs-dismiss="modal">Save</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" id="btn-Update-Cancel" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
