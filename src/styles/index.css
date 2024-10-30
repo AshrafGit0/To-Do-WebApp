@@ -1,4 +1,4 @@
-body{
+body {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
@@ -6,39 +6,88 @@ body{
     background-position: 50%;
     overflow: hidden;
 }
-.bg-shade{
+
+.bg-shade {
     height: 100%;
     width: 105%;
     transform: translatex(-12px);
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.462);
 }
-section{
+
+section {
     height: 85vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.RegisterForm{
+
+.RegisterForm {
     background-color: rgb(255, 255, 255);
     color: black;
     padding: 30px;
     width: 30%;
     border-radius: 5px;
     margin-bottom: 70px;
-    
+
 }
-.SigninForm{
+
+.SigninForm {
     margin-bottom: 70px;
 }
-.main{
-    overflow:auto ;
-    height: 470px; 
+
+.main {
+    overflow: auto;
+    height: 470px;
 }
-.TaskId{
+
+.TaskId {
     cursor: not-allowed;
 }
-.modal .modal-body input{
+
+.modal .modal-body input {
     margin-top: 4px;
+}
+
+.Dashboard {
+    width: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* Styles */
+    .bg-shade {
+        width: 120%;
+    }
+
+    .btn-container {
+        margin-right: 9%;
+    }
+
+    .RegisterForm {
+        width: 90%;
+        margin-top: 90px;
+    }
+
+    .Dashboard {
+        width: 95%;
+    }
+
+    .signout-container {
+        margin-right: 9%;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .Dashboard {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .Dashboard {
+        width: 80%;
+    }
 }
